@@ -1,0 +1,41 @@
+.rotate-object {
+    animation: rotate 2s linear infinite; /* Adjust time & speed */
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.rotate-once {
+    animation: rotate_once 2s ease-in-out forwards;
+}
+
+@keyframes rotate_once {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.zoom-in {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.zoom-in:hover {
+    transform: scale(1.2);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+.image-hover:hover {
+    filter: sepia(100%) hue-rotate(0deg) saturate(300%);
+    transition: filter 0.3s ease-in-out;
+    opacity: 0.5; 
+}
+  
+

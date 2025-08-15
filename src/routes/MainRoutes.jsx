@@ -1,0 +1,29 @@
+import React from "react";
+import { Route } from "react-router-dom";
+import Home from "../components/pages/main/landing-page";
+import About from "../components/pages/main/about-us";
+import Services from "../components/pages/main/services-page";
+import Collection from "../components/pages/main/collection-page/featured-project-page";
+import FeaturedProject from "../components/pages/main/collection-page/featured-project-page/FeaturedProject";
+import FeaturedUnit from "../components/pages/main/collection-page/featured-project-page/FeaturedUnit";
+import ProjectUnit from "../components/pages/main/collection-page/featured-project-page/ProjectUnit";
+import FeaturedBuild from "../components/pages/main/collection-page/featured-build-page";
+import ProjectBuild from "../components/pages/main/collection-page/featured-build-page/ProjectBuild";
+import Blog from "../components/pages/main/media-page/blog-page";
+import Video from "../components/pages/main/media-page/video-page";
+
+const mainRoutes = [
+  <Route key="/" index element={<Home />} />,
+  <Route key="/about-us" path="about-us" element={<About />} />,
+  <Route key="/services" path="services" element={<Services />} />,
+  <Route key="/collection" path="collection" element={<Collection />} />,
+  <Route key="/featured-project" path="featured-project" element={<FeaturedProject />} />,
+  <Route key="/featured-unit/:categories" path="featured-unit/:categories" element={<FeaturedUnit />} />,
+  <Route key="/project-unit/:categories/:project_unit" path="project-unit/:categories/:project_unit" element={<ProjectUnit />} />,
+  <Route key="/featured-build" path="featured-build" element={<FeaturedBuild />} />,
+  <Route key="/project-build/:unit_id" path="project-build/:unit_id" element={<ProjectBuild />} />,
+  <Route key="/blog/:categories" path="blog/:categories" element={<Blog />} />,
+  <Route key="/video" path="video" element={<Video />} />,
+];
+
+export default mainRoutes; 
